@@ -12,7 +12,7 @@ I primarily use [R](https://www.r-project.org/) for my work. Some of my interest
 I've written a few packages:
 
 * 🥾 [**workboots**](https://markjrieke.github.io/workboots/) - a package for generating prediction intervals from a [tidymodel](https://www.tidymodels.org/) [workflow](https://workflows.tidymodels.org/)
-* 🐦 [**nplyr**](https://github.com/markjrieke/nplyr) (in-progress) - a grammar of (nested) data manipulation
+* 🐦 [**nplyr**](https://markjrieke.github.io/nplyr/) - a grammar of (nested) data manipulation
 * 🗒️ [**riekelib**](https://github.com/markjrieke/riekelib) - a collection of functions I use regularly
 
 I sometimes write about projects I'm working on at [thedatadiary.net](https://www.thedatadiary.net/).
