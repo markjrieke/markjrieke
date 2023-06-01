@@ -4,10 +4,10 @@ My name is Mark Rieke and I am a senior consumer experience (CX) analyst at [Mem
 
 I primarily use [R](https://www.r-project.org/) for my work. Some of my interests include:
 
-* Machine learning & quantifying uncertainty;
-* Effective communication via data visualization/data storytelling;
-* Package development;
-* Having fun with R!
+* Bayesian inference via [Stan](https://mc-stan.org/);
+* Survey analysis for people analytics/electoral forecasting;
+* Data visualization design/storytelling with uncertainty;
+* Package development.
 
 I've written a few packages:
 
