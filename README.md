@@ -23,7 +23,7 @@ If you'd like to get in touch, you can reach me in the following channels:
   <a href="https://twitter.com/markjrieke">
     <img src="https://img.shields.io/badge/-Twitter-555555?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
   </a>
-  <a href="https://www.linkedin.com/in/mark-j-rieke-ab4b0ab4/">
+  <a href="https://www.linkedin.com/in/markjrieke/">
     <img src="https://img.shields.io/badge/-LinkedIn-555555?style=for-the-badge" alt="LinkedIn">
   </a>
 </p>
