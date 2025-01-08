@@ -20,8 +20,8 @@ I sometimes write about projects I'm working on at [thedatadiary.net](https://ww
 If you'd like to get in touch, you can reach me in the following channels:
 
 <p align="left">
-  <a href="https://twitter.com/markjrieke">
-    <img src="https://img.shields.io/badge/-Twitter-555555?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+  <a href="https://bsky.app/profile/markjrieke.bsky.social">
+    <img src="https://img.shields.io/badge/-bluesky-555555?style=for-the-badge&logo=bluesky&logoColor=white" alt="Bluesky">
   </a>
   <a href="https://www.linkedin.com/in/markjrieke/">
     <img src="https://img.shields.io/badge/-LinkedIn-555555?style=for-the-badge" alt="LinkedIn">
