@@ -1,6 +1,6 @@
 ### About Me
 
-My name is Mark Rieke and I am a Data Scientist at [Game Data Pros, Inc.](https://gamedatapros.com/) where I help to build systems for conducting and analyzing A/B tests from a Bayesian perspective. I love making beautiful charts, working on home improvement projects, and playing jazzy piano.
+My name is Mark Rieke and I am a Data Scientist at [Game Data Pros, Inc.](https://gamedatapros.com/) where I help to build systems for conducting and analyzing A/B tests from a Bayesian perspective. After hours and on weekends you can catch me building [swishbook](https://www.swishbook.com/), or playing jazzy piano.
 
 I primarily use [R](https://www.r-project.org/) for my personal work. Some of my interests include:
 
