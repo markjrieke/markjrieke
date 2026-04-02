@@ -2,6 +2,10 @@ I am a data scientist, Bayesian statistician, ML engineer, or whatever the curre
 
 I am a certified pizza afficianado and proud owner of two dogs, one cat, and far too many houseplants.
 
+<p align="left">
+  <img src="./assets/activity-sparkline.svg" alt="Activity sparkline" />
+</p>
+
 [^pretty-colors]: The deep truth is that you can put me in front of any syntax-highlighting IDE and I'm a happy camper. 
 
 <!---
