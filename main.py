@@ -76,20 +76,6 @@ def scale_points(counts, width, height, padding_top, padding_bottom, padding_x):
         points.append((x, y))
     return points
 
-def smooth_midpoints(points):
-    """
-    Returns a list of quadratic curve segments:
-    (x0, y0, cx, cy, x1, y1)
-    """
-    segments = []
-    for i in range(1, len(points)):
-        x0, y0 = points[i - 1]
-        x1, y1 = points[i]
-        cx = (x0 + x1) / 2
-        cy = y0
-        segments.append((x0, y0, cx, cy, x1, y1))
-    return segments
-
 def area_path(points, base_y):
     if len(points) < 2:
         return ""
@@ -107,56 +93,57 @@ def area_path(points, base_y):
     return d
 
 def green_for_intensity(value, max_value):
-    """
-    Map contribution intensity to GitHub-ish greens.
-    """
     if max_value <= 0:
-        return "#1f6f3d"
+        return "#238636"
 
     ratio = value / max_value
 
-    if ratio <= 0.10:
+    if ratio <= 0.12:
         return "#1f6f3d"
-    elif ratio <= 0.30:
+    elif ratio <= 0.32:
         return "#238636"
-    elif ratio <= 0.55:
+    elif ratio <= 0.58:
         return "#2ea043"
-    elif ratio <= 0.80:
+    elif ratio <= 0.82:
         return "#3fb950"
     else:
         return "#56d364"
 
 def build_svg(weeks):
-    width = 380
-    height = 78
-    padding_x = 12
-    padding_top = 10
-    padding_bottom = 24
+    # intentionally compact + repo-pulse-ish
+    width = 240
+    height = 32
+    padding_x = 3
+    padding_top = 3
+    padding_bottom = 4
 
     counts = [w["count"] for w in weeks]
     points = scale_points(counts, width, height, padding_top, padding_bottom, padding_x)
-    segments = smooth_midpoints(points)
 
     base_y = height - padding_bottom
     fill = area_path(points, base_y)
 
-    total = sum(counts)
     max_week = max(counts) if counts else 0
 
     segment_paths = []
-    for i, (x0, y0, cx, cy, x1, y1) in enumerate(segments):
-        intensity = max(counts[i], counts[i + 1])
+    for i in range(1, len(points)):
+        x0, y0 = points[i - 1]
+        x1, y1 = points[i]
+        cx = (x0 + x1) / 2
+
+        intensity = max(counts[i - 1], counts[i])
         color = green_for_intensity(intensity, max_week)
+
         segment_paths.append(
-            f'<path d="M {x0:.2f},{y0:.2f} Q {cx:.2f},{cy:.2f} {x1:.2f},{y1:.2f}" '
-            f'stroke="{color}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
+            f'<path d="M {x0:.2f},{y0:.2f} Q {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f}" '
+            f'stroke="{color}" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
         )
 
     segment_svg = "\n  ".join(segment_paths)
 
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
-  <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="1"/>
-  <path d="{fill}" fill="#2ea043" fill-opacity="0.08"/>
+  <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="0.8"/>
+  <path d="{fill}" fill="#2ea043" fill-opacity="0.06"/>
   {segment_svg}
 </svg>'''
     return svg

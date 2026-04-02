@@ -1,8 +1,22 @@
+<table>
+<tr>
+<td valign="top">
+
 I am a data scientist, Bayesian statistician, ML engineer, or whatever the current flavor-of-the-day title might be.[^pretty-colors] I currently work at [Fortis Games](https://www.fortisgames.com/en-us/) where I build models and systems for optimizing revenue, analyzing experiments, and improving the player experience. I sometimes write about (personal) projects I'm working on at [thedatadiary.net](https://www.thedatadiary.net).
 
 I am a certified pizza afficianado and proud owner of two dogs, one cat, and far too many houseplants.
 
-<img src="./assets/activity-sparkline.svg" alt="Activity sparkline" />
+</td>
+<td align="right" valign="top">
+
+<img src="./assets/activity-sparkline.svg" alt="Recent GitHub activity sparkline" />
+
+<br />
+<sub>26-week repo activity pulse</sub>
+
+</td>
+</tr>
+</table>
 
 [^pretty-colors]: The deep truth is that you can put me in front of any syntax-highlighting IDE and I'm a happy camper. 
 
