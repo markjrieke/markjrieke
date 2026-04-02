@@ -1,4 +1,29 @@
-<svg width="340" height="56" viewBox="0 0 340 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
-  <path d="M 6.00,40.00 L 6.00,39.24 Q 12.56,39.24 19.12,38.49 Q 25.68,38.49 32.24,40.00 Q 38.80,40.00 45.36,40.00 Q 51.92,40.00 58.48,40.00 Q 65.04,40.00 71.60,21.11 Q 78.16,21.11 84.72,34.71 Q 91.28,34.71 97.84,36.98 Q 104.40,36.98 110.96,22.62 Q 117.52,22.62 124.08,37.73 Q 130.64,37.73 137.20,27.91 Q 143.76,27.91 150.32,36.98 Q 156.88,36.98 163.44,39.24 Q 170.00,39.24 176.56,35.47 Q 183.12,35.47 189.68,33.20 Q 196.24,33.20 202.80,36.98 Q 209.36,36.98 215.92,36.22 Q 222.48,36.22 229.04,28.67 Q 235.60,28.67 242.16,30.93 Q 248.72,30.93 255.28,27.91 Q 261.84,27.91 268.40,30.18 Q 274.96,30.18 281.52,27.91 Q 288.08,27.91 294.64,35.47 Q 301.20,35.47 307.76,6.00 Q 314.32,6.00 320.88,36.22 Q 327.44,36.22 334.00,30.93 L 334.00,40.00 Z" fill="#2da44e" fill-opacity="0.12"/>
-  <path d="M 6.00,39.24 Q 12.56,39.24 19.12,38.49 Q 25.68,38.49 32.24,40.00 Q 38.80,40.00 45.36,40.00 Q 51.92,40.00 58.48,40.00 Q 65.04,40.00 71.60,21.11 Q 78.16,21.11 84.72,34.71 Q 91.28,34.71 97.84,36.98 Q 104.40,36.98 110.96,22.62 Q 117.52,22.62 124.08,37.73 Q 130.64,37.73 137.20,27.91 Q 143.76,27.91 150.32,36.98 Q 156.88,36.98 163.44,39.24 Q 170.00,39.24 176.56,35.47 Q 183.12,35.47 189.68,33.20 Q 196.24,33.20 202.80,36.98 Q 209.36,36.98 215.92,36.22 Q 222.48,36.22 229.04,28.67 Q 235.60,28.67 242.16,30.93 Q 248.72,30.93 255.28,27.91 Q 261.84,27.91 268.40,30.18 Q 274.96,30.18 281.52,27.91 Q 288.08,27.91 294.64,35.47 Q 301.20,35.47 307.76,6.00 Q 314.32,6.00 320.88,36.22 Q 327.44,36.22 334.00,30.93" stroke="#2da44e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg width="380" height="78" viewBox="0 0 380 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
+  <line x1="12" y1="54" x2="368" y2="54" stroke="#30363d" stroke-width="1"/>
+  <path d="M 12.00,54.00 L 12.00,53.02 Q 19.12,53.02 26.24,52.04 Q 33.36,52.04 40.48,54.00 Q 47.60,54.00 54.72,54.00 Q 61.84,54.00 68.96,54.00 Q 76.08,54.00 83.20,29.56 Q 90.32,29.56 97.44,47.16 Q 104.56,47.16 111.68,50.09 Q 118.80,50.09 125.92,31.51 Q 133.04,31.51 140.16,51.07 Q 147.28,51.07 154.40,38.36 Q 161.52,38.36 168.64,50.09 Q 175.76,50.09 182.88,53.02 Q 190.00,53.02 197.12,48.13 Q 204.24,48.13 211.36,45.20 Q 218.48,45.20 225.60,50.09 Q 232.72,50.09 239.84,49.11 Q 246.96,49.11 254.08,39.33 Q 261.20,39.33 268.32,42.27 Q 275.44,42.27 282.56,38.36 Q 289.68,38.36 296.80,41.29 Q 303.92,41.29 311.04,38.36 Q 318.16,38.36 325.28,48.13 Q 332.40,48.13 339.52,10.00 Q 346.64,10.00 353.76,49.11 Q 360.88,49.11 368.00,41.29 L 368.00,54.00 Z" fill="#2ea043" fill-opacity="0.08"/>
+  <path d="M 12.00,53.02 Q 19.12,53.02 26.24,52.04" stroke="#1f6f3d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 26.24,52.04 Q 33.36,52.04 40.48,54.00" stroke="#1f6f3d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 40.48,54.00 Q 47.60,54.00 54.72,54.00" stroke="#1f6f3d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 54.72,54.00 Q 61.84,54.00 68.96,54.00" stroke="#1f6f3d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 68.96,54.00 Q 76.08,54.00 83.20,29.56" stroke="#3fb950" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 83.20,29.56 Q 90.32,29.56 97.44,47.16" stroke="#3fb950" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 97.44,47.16 Q 104.56,47.16 111.68,50.09" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 111.68,50.09 Q 118.80,50.09 125.92,31.51" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 125.92,31.51 Q 133.04,31.51 140.16,51.07" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 140.16,51.07 Q 147.28,51.07 154.40,38.36" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 154.40,38.36 Q 161.52,38.36 168.64,50.09" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 168.64,50.09 Q 175.76,50.09 182.88,53.02" stroke="#1f6f3d" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 182.88,53.02 Q 190.00,53.02 197.12,48.13" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 197.12,48.13 Q 204.24,48.13 211.36,45.20" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 211.36,45.20 Q 218.48,45.20 225.60,50.09" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 225.60,50.09 Q 232.72,50.09 239.84,49.11" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 239.84,49.11 Q 246.96,49.11 254.08,39.33" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 254.08,39.33 Q 261.20,39.33 268.32,42.27" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 268.32,42.27 Q 275.44,42.27 282.56,38.36" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 282.56,38.36 Q 289.68,38.36 296.80,41.29" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 296.80,41.29 Q 303.92,41.29 311.04,38.36" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 311.04,38.36 Q 318.16,38.36 325.28,48.13" stroke="#2ea043" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 325.28,48.13 Q 332.40,48.13 339.52,10.00" stroke="#56d364" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 339.52,10.00 Q 346.64,10.00 353.76,49.11" stroke="#56d364" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 353.76,49.11 Q 360.88,49.11 368.00,41.29" stroke="#238636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>
