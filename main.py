@@ -94,20 +94,15 @@ def area_path(points, base_y):
 
 def green_for_intensity(value, max_value):
     if max_value <= 0:
-        return "#238636"
-
+        return "#274029"
     ratio = value / max_value
-
-    if ratio <= 0.12:
-        return "#1f6f3d"
-    elif ratio <= 0.32:
-        return "#238636"
-    elif ratio <= 0.58:
-        return "#2ea043"
-    elif ratio <= 0.82:
-        return "#3fb950"
-    else:
-        return "#56d364"
+    # interpolate between dark green and bright green
+    dark_rgb = (39, 64, 41)     # #274029
+    bright_rgb = (86, 211, 100) # #56d364
+    r = int(dark_rgb[0] + ratio * (bright_rgb[0] - dark_rgb[0]))
+    g = int(dark_rgb[1] + ratio * (bright_rgb[1] - dark_rgb[1]))
+    b = int(dark_rgb[2] + ratio * (bright_rgb[2] - dark_rgb[2]))
+    return f"#{r:02x}{g:02x}{b:02x}"
 
 def build_svg(weeks):
     # intentionally compact + repo-pulse-ish
