@@ -46,20 +46,18 @@ def fetch_contributions():
         ["contributionCalendar"]["weeks"]
     )
 
-    days = []
-    for week in weeks:
-        for day in week["contributionDays"]:
-            days.append({
-                "date": day["date"],
-                "count": day["contributionCount"]
-            })
+    return [
+        {
+            "days": week["contributionDays"],
+            "count": sum(day["contributionCount"] for day in week["contributionDays"]),
+        }
+        for week in weeks
+    ]
 
-    return days
+def last_n_weeks(weeks, n=26):
+    return weeks[-n:]
 
-def last_n_days(days, n=90):
-    return days[-n:]
-
-def scale_points(counts, width, height, padding):
+def scale_points(counts, width, height, padding_top, padding_bottom, padding_x):
     n = len(counts)
     if n == 0:
         return []
@@ -67,14 +65,14 @@ def scale_points(counts, width, height, padding):
     max_count = max(counts)
     max_count = max(max_count, 1)
 
-    usable_w = width - 2 * padding
-    usable_h = height - 2 * padding
+    usable_w = width - 2 * padding_x
+    usable_h = height - padding_top - padding_bottom
 
     points = []
     for i, c in enumerate(counts):
-        x = padding + (usable_w * i / (n - 1 if n > 1 else 1))
+        x = padding_x + (usable_w * i / (n - 1 if n > 1 else 1))
         normalized = c / max_count
-        y = padding + usable_h * (1 - normalized)
+        y = padding_top + usable_h * (1 - normalized)
         points.append((x, y))
     return points
 
@@ -90,11 +88,10 @@ def smooth_path(points):
         d += f" Q {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f}"
     return d
 
-def area_path(points, width, height, padding):
+def area_path(points, base_y):
     if len(points) < 2:
         return ""
 
-    base_y = height - padding
     d = f"M {points[0][0]:.2f},{base_y:.2f} "
     d += f"L {points[0][0]:.2f},{points[0][1]:.2f} "
 
@@ -107,40 +104,29 @@ def area_path(points, width, height, padding):
     d += f"L {points[-1][0]:.2f},{base_y:.2f} Z"
     return d
 
-def build_svg(days):
-    width = 360
-    height = 72
-    padding = 8
+def build_svg(weeks):
+    width = 340
+    height = 56
+    padding_x = 6
+    padding_top = 6
+    padding_bottom = 16
 
-    counts = [d["count"] for d in days]
-    points = scale_points(counts, width, height, padding)
-
+    counts = [w["count"] for w in weeks]
+    points = scale_points(counts, width, height, padding_top, padding_bottom, padding_x)
     line = smooth_path(points)
-    fill = area_path(points, width, height, padding)
-
-    circles = "\n".join(
-        f'<circle cx="{x:.2f}" cy="{y:.2f}" r="1.8" fill="#2da44e" />'
-        for x, y in points
-    )
-
-    total = sum(counts)
-    max_day = max(counts) if counts else 0
+    base_y = height - padding_bottom
+    fill = area_path(points, base_y)
 
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
-  <rect x="0" y="0" width="{width}" height="{height}" rx="12" fill="#0d1117"/>
-  <path d="{fill}" fill="#2da44e" fill-opacity="0.14"/>
-  <path d="{line}" stroke="#2da44e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  {circles}
-  <text x="{padding}" y="{height - 10}" fill="#8b949e" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9">
-    Last {len(days)} days • {total} contributions • max {max_day}/day
-  </text>
+  <path d="{fill}" fill="#2da44e" fill-opacity="0.12"/>
+  <path d="{line}" stroke="#2da44e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>'''
     return svg
 
 def main():
-    days = fetch_contributions()
-    days = last_n_days(days, 90)
-    svg = build_svg(days)
+    weeks = fetch_contributions()
+    weeks = last_n_weeks(weeks, 26)
+    svg = build_svg(weeks)
     OUTPUT_PATH.write_text(svg, encoding="utf-8")
     print(f"Wrote {OUTPUT_PATH}")
 
