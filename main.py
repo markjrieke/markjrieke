@@ -127,6 +127,24 @@ def green_for_intensity(value, max_value):
     b = int(dark_rgb[2] + ratio * (bright_rgb[2] - dark_rgb[2]))
     return f"#{r:02x}{g:02x}{b:02x}"
 
+def gradient_stops(points, counts, width, padding_x, max_value):
+    if not points or not counts:
+        return ""
+
+    usable_w = width - 2 * padding_x
+    if usable_w <= 0:
+        usable_w = 1
+
+    stops = []
+    for (x, _), count in zip(points, counts):
+        offset = ((x - padding_x) / usable_w) * 100
+        color = green_for_intensity(count, max_value)
+        stops.append(
+            f'<stop offset="{offset:.2f}%" stop-color="{color}"/>'
+        )
+
+    return "\n      ".join(stops)
+
 def build_svg(weeks):
     width = 240
     height = 32
@@ -142,12 +160,17 @@ def build_svg(weeks):
     line = line_path(points)
 
     max_week = max(counts) if counts else 0
-    line_color = green_for_intensity(max_week, max_week) if max_week > 0 else "#56d364"
+    stops = gradient_stops(points, counts, width, padding_x, max_week)
 
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
+  <defs>
+    <linearGradient id="sparkGradient" x1="{padding_x}" y1="0" x2="{width - padding_x}" y2="0" gradientUnits="userSpaceOnUse">
+      {stops}
+    </linearGradient>
+  </defs>
   <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="0.8"/>
   <path d="{fill}" fill="#2ea043" fill-opacity="0.04"/>
-  <path d="{line}" stroke="{line_color}" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="{line}" stroke="url(#sparkGradient)" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>'''
     return svg
 
