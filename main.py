@@ -177,7 +177,7 @@ def build_svg(weeks):
 def main():
     all_weeks = [fetch_contributions(u) for u in GITHUB_USERNAMES]
     weeks = merge_contributions(all_weeks)
-    weeks = last_n_weeks(weeks, 26)
+    weeks = last_n_weeks(weeks, 52)
     svg = build_svg(weeks)
     OUTPUT_PATH.write_text(svg, encoding="utf-8")
     print(f"Wrote {OUTPUT_PATH}")
