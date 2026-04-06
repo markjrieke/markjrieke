@@ -1,5 +1,35 @@
 <svg width="240" height="32" viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
+  <defs>
+    <linearGradient id="sparkGradient" x1="3" y1="0" x2="237" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0.00%" stop-color="#28452b"/>
+      <stop offset="4.00%" stop-color="#28432a"/>
+      <stop offset="8.00%" stop-color="#274029"/>
+      <stop offset="12.00%" stop-color="#274129"/>
+      <stop offset="16.00%" stop-color="#419149"/>
+      <stop offset="20.00%" stop-color="#2e5732"/>
+      <stop offset="24.00%" stop-color="#2b4d2e"/>
+      <stop offset="28.00%" stop-color="#3a7d41"/>
+      <stop offset="32.00%" stop-color="#2e5732"/>
+      <stop offset="36.00%" stop-color="#326337"/>
+      <stop offset="40.00%" stop-color="#29472c"/>
+      <stop offset="44.00%" stop-color="#274129"/>
+      <stop offset="48.00%" stop-color="#2c4f2f"/>
+      <stop offset="52.00%" stop-color="#2f5b34"/>
+      <stop offset="56.00%" stop-color="#29472c"/>
+      <stop offset="60.00%" stop-color="#2a492c"/>
+      <stop offset="64.00%" stop-color="#316136"/>
+      <stop offset="68.00%" stop-color="#2e5732"/>
+      <stop offset="72.00%" stop-color="#315f35"/>
+      <stop offset="76.00%" stop-color="#2f5933"/>
+      <stop offset="80.00%" stop-color="#315f35"/>
+      <stop offset="84.00%" stop-color="#2c4f2f"/>
+      <stop offset="88.00%" stop-color="#56d364"/>
+      <stop offset="92.00%" stop-color="#346939"/>
+      <stop offset="96.00%" stop-color="#346b3a"/>
+      <stop offset="100.00%" stop-color="#346b3a"/>
+    </linearGradient>
+  </defs>
   <line x1="3" y1="28" x2="237" y2="28" stroke="#30363d" stroke-width="0.8"/>
-  <path d="M 3.00,28.00 L 3.00,26.99 L 12.36,27.32 L 21.72,28.00 L 31.08,27.66 L 40.44,14.15 L 49.80,23.95 L 59.16,25.64 L 68.52,17.53 L 77.88,23.95 L 87.24,21.92 L 96.60,26.65 L 105.96,27.66 L 115.32,25.30 L 124.68,23.27 L 134.04,26.65 L 143.40,26.31 L 152.76,22.26 L 162.12,23.95 L 171.48,22.59 L 180.84,23.61 L 190.20,22.59 L 199.56,25.30 L 208.92,3.00 L 218.28,20.91 L 227.64,20.57 L 237.00,21.24 L 237.00,28.00 Z" fill="#2ea043" fill-opacity="0.04"/>
-  <path d="M 3.00,26.99 L 12.36,27.32 L 21.72,28.00 L 31.08,27.66 L 40.44,14.15 L 49.80,23.95 L 59.16,25.64 L 68.52,17.53 L 77.88,23.95 L 87.24,21.92 L 96.60,26.65 L 105.96,27.66 L 115.32,25.30 L 124.68,23.27 L 134.04,26.65 L 143.40,26.31 L 152.76,22.26 L 162.12,23.95 L 171.48,22.59 L 180.84,23.61 L 190.20,22.59 L 199.56,25.30 L 208.92,3.00 L 218.28,20.91 L 227.64,20.57 L 237.00,21.24" stroke="#56d364" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 3.00,28.00 L 3.00,26.99 L 12.36,27.32 L 21.72,28.00 L 31.08,27.66 L 40.44,14.15 L 49.80,23.95 L 59.16,25.64 L 68.52,17.53 L 77.88,23.95 L 87.24,21.92 L 96.60,26.65 L 105.96,27.66 L 115.32,25.30 L 124.68,23.27 L 134.04,26.65 L 143.40,26.31 L 152.76,22.26 L 162.12,23.95 L 171.48,22.59 L 180.84,23.61 L 190.20,22.59 L 199.56,25.30 L 208.92,3.00 L 218.28,20.91 L 227.64,20.57 L 237.00,20.57 L 237.00,28.00 Z" fill="#2ea043" fill-opacity="0.04"/>
+  <path d="M 3.00,26.99 L 12.36,27.32 L 21.72,28.00 L 31.08,27.66 L 40.44,14.15 L 49.80,23.95 L 59.16,25.64 L 68.52,17.53 L 77.88,23.95 L 87.24,21.92 L 96.60,26.65 L 105.96,27.66 L 115.32,25.30 L 124.68,23.27 L 134.04,26.65 L 143.40,26.31 L 152.76,22.26 L 162.12,23.95 L 171.48,22.59 L 180.84,23.61 L 190.20,22.59 L 199.56,25.30 L 208.92,3.00 L 218.28,20.91 L 227.64,20.57 L 237.00,20.57" stroke="url(#sparkGradient)" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>
