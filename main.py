@@ -194,7 +194,7 @@ def get_weeks(refresh=False):
         print("Fetching fresh GitHub contribution data...")
         all_weeks = [fetch_contributions(u) for u in GITHUB_USERNAMES]
         weeks = merge_contributions(all_weeks)
-        weeks = last_n_weeks(weeks, 26)
+        weeks = last_n_weeks(weeks, 52)
         save_weeks(weeks)
         print(f"Saved activity data to {CACHE_PATH}")
         return weeks

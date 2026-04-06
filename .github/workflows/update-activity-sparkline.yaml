@@ -31,7 +31,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add assets/activity-sparkline.svg
+          git add assets/
 
           if git diff --cached --quiet; then
             echo "No sparkline changes to commit."
