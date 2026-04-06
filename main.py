@@ -5,7 +5,7 @@ from pathlib import Path
 GITHUB_TOKEN = os.environ["GH_TOKEN"]
 GITHUB_USERNAMES = [
     os.environ["GITHUB_USERNAME"],
-    'markjrieke-fortisgames'
+    "markjrieke-fortisgames"
 ]
 
 OUTPUT_PATH = Path("assets/activity-sparkline.svg")
@@ -61,13 +61,13 @@ def merge_contributions(all_weeks_list):
     combined = {}
     for weeks in all_weeks_list:
         for week in weeks:
-            week_key = week['days'][0]['date']
+            week_key = week["days"][0]["date"]
             if week_key in combined:
-                combined[week_key]['count'] += week['count']
+                combined[week_key]["count"] += week["count"]
             else:
                 combined[week_key] = {
-                    'days': week['days'],
-                    'count': week['count']
+                    "days": week["days"],
+                    "count": week["count"]
                 }
 
     return [combined[k] for k in sorted(combined)]
@@ -101,20 +101,25 @@ def area_path(points, base_y):
     d = f"M {points[0][0]:.2f},{base_y:.2f} "
     d += f"L {points[0][0]:.2f},{points[0][1]:.2f} "
 
-    for i in range(1, len(points)):
-        x0, y0 = points[i - 1]
-        x1, y1 = points[i]
-        cx = (x0 + x1) / 2
-        d += f"L {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f} "
+    for x, y in points[1:]:
+        d += f"L {x:.2f},{y:.2f} "
 
     d += f"L {points[-1][0]:.2f},{base_y:.2f} Z"
     return d
+
+def line_path(points):
+    if len(points) < 2:
+        return ""
+
+    d = f"M {points[0][0]:.2f},{points[0][1]:.2f} "
+    for x, y in points[1:]:
+        d += f"L {x:.2f},{y:.2f} "
+    return d.strip()
 
 def green_for_intensity(value, max_value):
     if max_value <= 0:
         return "#274029"
     ratio = value / max_value
-    # interpolate between dark green and bright green
     dark_rgb = (39, 64, 41)     # #274029
     bright_rgb = (86, 211, 100) # #56d364
     r = int(dark_rgb[0] + ratio * (bright_rgb[0] - dark_rgb[0]))
@@ -123,7 +128,6 @@ def green_for_intensity(value, max_value):
     return f"#{r:02x}{g:02x}{b:02x}"
 
 def build_svg(weeks):
-    # intentionally compact + repo-pulse-ish
     width = 240
     height = 32
     padding_x = 3
@@ -135,29 +139,15 @@ def build_svg(weeks):
 
     base_y = height - padding_bottom
     fill = area_path(points, base_y)
+    line = line_path(points)
 
     max_week = max(counts) if counts else 0
-
-    segment_paths = []
-    for i in range(1, len(points)):
-        x0, y0 = points[i - 1]
-        x1, y1 = points[i]
-        cx = (x0 + x1) / 2
-
-        intensity = max(counts[i - 1], counts[i])
-        color = green_for_intensity(intensity, max_week)
-
-        segment_paths.append(
-            f'<path d="M {x0:.2f},{y0:.2f} L {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f}" '
-            f'stroke="{color}" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-        )
-
-    segment_svg = "\n  ".join(segment_paths)
+    line_color = green_for_intensity(max_week, max_week) if max_week > 0 else "#56d364"
 
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub activity sparkline">
   <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="0.8"/>
-  <path d="{fill}" fill="#2ea043" fill-opacity="0.06"/>
-  {segment_svg}
+  <path d="{fill}" fill="#2ea043" fill-opacity="0.04"/>
+  <path d="{line}" stroke="{line_color}" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>'''
     return svg
 
