@@ -24,7 +24,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
-        run: uv run main.py
+        run: uv run main.py --refresh
 
       - name: Commit updated sparkline
         run: |

@@ -1,4 +1,6 @@
 import os
+import json
+import argparse
 import requests
 from pathlib import Path
 
@@ -9,7 +11,10 @@ GITHUB_USERNAMES = [
 ]
 
 OUTPUT_PATH = Path("assets/activity-sparkline.svg")
+CACHE_PATH = Path("assets/activity-data.json")
+
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 QUERY = """
 query($login: String!) {
@@ -75,6 +80,16 @@ def merge_contributions(all_weeks_list):
 def last_n_weeks(weeks, n=26):
     return weeks[-n:]
 
+def save_weeks(weeks, path=CACHE_PATH):
+    path.write_text(json.dumps(weeks, indent=2), encoding="utf-8")
+
+def load_weeks(path=CACHE_PATH):
+    if not path.exists():
+        raise FileNotFoundError(
+            f"No cached activity data found at {path}. Run with --refresh first."
+        )
+    return json.loads(path.read_text(encoding="utf-8"))
+
 def scale_points(counts, width, height, padding_top, padding_bottom, padding_x):
     n = len(counts)
     if n == 0:
@@ -120,8 +135,8 @@ def green_for_intensity(value, max_value):
     if max_value <= 0:
         return "#274029"
     ratio = value / max_value
-    dark_rgb = (39, 64, 41)     # #274029
-    bright_rgb = (86, 211, 100) # #56d364
+    dark_rgb = (12, 28, 16)     # darker green for more contrast
+    bright_rgb = (86, 211, 100) # GitHub-ish bright green
     r = int(dark_rgb[0] + ratio * (bright_rgb[0] - dark_rgb[0]))
     g = int(dark_rgb[1] + ratio * (bright_rgb[1] - dark_rgb[1]))
     b = int(dark_rgb[2] + ratio * (bright_rgb[2] - dark_rgb[2]))
@@ -174,10 +189,29 @@ def build_svg(weeks):
 </svg>'''
     return svg
 
+def get_weeks(refresh=False):
+    if refresh:
+        print("Fetching fresh GitHub contribution data...")
+        all_weeks = [fetch_contributions(u) for u in GITHUB_USERNAMES]
+        weeks = merge_contributions(all_weeks)
+        weeks = last_n_weeks(weeks, 26)
+        save_weeks(weeks)
+        print(f"Saved activity data to {CACHE_PATH}")
+        return weeks
+
+    print(f"Loading cached activity data from {CACHE_PATH}")
+    return load_weeks()
+
 def main():
-    all_weeks = [fetch_contributions(u) for u in GITHUB_USERNAMES]
-    weeks = merge_contributions(all_weeks)
-    weeks = last_n_weeks(weeks, 52)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Fetch fresh contribution data from GitHub and cache it locally."
+    )
+    args = parser.parse_args()
+
+    weeks = get_weeks(refresh=args.refresh)
     svg = build_svg(weeks)
     OUTPUT_PATH.write_text(svg, encoding="utf-8")
     print(f"Wrote {OUTPUT_PATH}")
