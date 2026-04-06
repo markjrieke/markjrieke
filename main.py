@@ -105,7 +105,7 @@ def area_path(points, base_y):
         x0, y0 = points[i - 1]
         x1, y1 = points[i]
         cx = (x0 + x1) / 2
-        d += f"Q {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f} "
+        d += f"L {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f} "
 
     d += f"L {points[-1][0]:.2f},{base_y:.2f} Z"
     return d
@@ -148,7 +148,7 @@ def build_svg(weeks):
         color = green_for_intensity(intensity, max_week)
 
         segment_paths.append(
-            f'<path d="M {x0:.2f},{y0:.2f} Q {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f}" '
+            f'<path d="M {x0:.2f},{y0:.2f} L {cx:.2f},{y0:.2f} {x1:.2f},{y1:.2f}" '
             f'stroke="{color}" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
         )
 
