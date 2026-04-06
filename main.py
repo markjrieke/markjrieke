@@ -81,7 +81,7 @@ def merge_contributions(all_weeks_list):
     out = [combined[k] for k in sorted(combined)]
 
 def last_n_weeks(weeks, n=26):
-    return weeks[-n:]
+    return weeks[-n:] if weeks is not None else []
 
 def scale_points(
     counts,
