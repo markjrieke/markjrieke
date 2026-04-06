@@ -9,7 +9,7 @@ GITHUB_USERNAMES = [
 ]
 
 OUTPUT_PATH = Path('assets/activity-sparkline.svg')
-OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 class SVG:
     WIDTH = 240
