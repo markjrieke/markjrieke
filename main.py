@@ -63,7 +63,7 @@ def merge_contributions(all_weeks_list):
         for week in weeks:
             week_key = week['days'][0]['date']
             if week_key in combined:
-                combined[week_key]['count'] += week_key['count']
+                combined[week_key]['count'] += week['count']
             else:
                 combined[week_key] = {
                     'days': week['days'],
