@@ -186,7 +186,7 @@ def build_svg(weeks):
         
     segment_svg = '\n '.join(segment_paths)
     out = f'''
-    <svg width="{svg.WIDTH}" height="{svg.HEIGHT} viewBox="0 0 {svg.WIDTH} {svg.HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Github activity sparkline">
+    <svg width="{svg.WIDTH}" height="{svg.HEIGHT}" viewBox="0 0 {svg.WIDTH} {svg.HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Github activity sparkline">
         <line x1="{svg.PADDING_X}" y1="{base_y}" x2="{svg.WIDTH - svg.PADDING_X}" y2="{base_y}" stroke="{svg.BASELINE_COLOR}" stroke-width="0.8"/>
         <path d="{fill}" fill="{svg.FILL_COLOR}" fill-opacity="{svg.FILL_OPACITY}"/>
         {segment_svg}
