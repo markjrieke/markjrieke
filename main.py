@@ -3,7 +3,10 @@ import requests
 from pathlib import Path
 
 GITHUB_TOKEN = os.environ["GH_TOKEN"]
-GITHUB_USERNAME = os.environ["GITHUB_USERNAME"]
+GITHUB_USERNAMES = [
+    os.environ["GITHUB_USERNAME"],
+    'markjrieke-fortisgames'
+]
 
 OUTPUT_PATH = Path("assets/activity-sparkline.svg")
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -25,10 +28,10 @@ query($login: String!) {
 }
 """
 
-def fetch_contributions():
+def fetch_contributions(username):
     response = requests.post(
         "https://api.github.com/graphql",
-        json={"query": QUERY, "variables": {"login": GITHUB_USERNAME}},
+        json={"query": QUERY, "variables": {"login": username}},
         headers={
             "Authorization": f"Bearer {GITHUB_TOKEN}",
             "Accept": "application/vnd.github+json",
@@ -53,6 +56,21 @@ def fetch_contributions():
         }
         for week in weeks
     ]
+
+def merge_contributions(all_weeks_list):
+    combined = {}
+    for weeks in all_weeks_list:
+        for week in weeks:
+            week_key = week['days'][0]['date']
+            if week_key in combined:
+                combined[week_key]['count'] += week_key['count']
+            else:
+                combined[week_key] = {
+                    'days': week['days'],
+                    'count': week['count']
+                }
+
+    return [combined[k] for k in sorted(combined)]
 
 def last_n_weeks(weeks, n=26):
     return weeks[-n:]
@@ -144,7 +162,8 @@ def build_svg(weeks):
     return svg
 
 def main():
-    weeks = fetch_contributions()
+    all_weeks = [fetch_contributions(u) for u in GITHUB_USERNAMES]
+    weeks = merge_contributions(all_weeks)
     weeks = last_n_weeks(weeks, 26)
     svg = build_svg(weeks)
     OUTPUT_PATH.write_text(svg, encoding="utf-8")
