@@ -1,4 +1,4 @@
-# mark rieke <img src="assets/activity-sparkline.svg" aligh="right" alt="Recent GitHub activity sparkline" width="220"/>
+# mark rieke <img src="assets/activity-sparkline.svg" aligh="right" alt="Recent GitHub activity sparkline"/>
 
 I am a data scientist, Bayesian statistician, ML engineer, or whatever the current flavor-of-the-day title might be.[^pretty-colors] I currently work at [Fortis Games](https://www.fortisgames.com/en-us/) where I build models and systems for optimizing revenue, analyzing experiments, and improving the player experience. I sometimes write about (personal) projects I'm working on at [thedatadiary.net](https://www.thedatadiary.net). 
 

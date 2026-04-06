@@ -135,8 +135,8 @@ def green_for_intensity(value, max_value):
     if max_value <= 0:
         return "#274029"
     ratio = value / max_value
-    dark_rgb = (12, 28, 16)     # darker green for more contrast
-    bright_rgb = (86, 211, 100) # GitHub-ish bright green
+    dark_rgb = (44, 72, 45)     # darker green for more contrast
+    bright_rgb = (102, 149, 97) # GitHub-ish bright green
     r = int(dark_rgb[0] + ratio * (bright_rgb[0] - dark_rgb[0]))
     g = int(dark_rgb[1] + ratio * (bright_rgb[1] - dark_rgb[1]))
     b = int(dark_rgb[2] + ratio * (bright_rgb[2] - dark_rgb[2]))
@@ -161,11 +161,11 @@ def gradient_stops(points, counts, width, padding_x, max_value):
     return "\n      ".join(stops)
 
 def build_svg(weeks):
-    width = 240
-    height = 32
+    width = 180
+    height = 30
     padding_x = 3
-    padding_top = 3
-    padding_bottom = 4
+    padding_top = 0
+    padding_bottom = 0
 
     counts = [w["count"] for w in weeks]
     points = scale_points(counts, width, height, padding_top, padding_bottom, padding_x)
@@ -185,7 +185,7 @@ def build_svg(weeks):
   </defs>
   <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="0.8"/>
   <path d="{fill}" fill="#2ea043" fill-opacity="0.04"/>
-  <path d="{line}" stroke="url(#sparkGradient)" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="{line}" stroke="url(#sparkGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>'''
     return svg
 
