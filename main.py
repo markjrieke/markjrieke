@@ -185,7 +185,7 @@ def build_svg(weeks):
   </defs>
   <line x1="{padding_x}" y1="{base_y}" x2="{width - padding_x}" y2="{base_y}" stroke="#30363d" stroke-width="0.8"/>
   <path d="{fill}" fill="#2ea043" fill-opacity="0.04"/>
-  <path d="{line}" stroke="url(#sparkGradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="{line}" stroke="url(#sparkGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>'''
     return svg
 
