@@ -1614,7 +1614,7 @@
         "contributionCount": 0
       }
     ],
-    "count": 22
+    "count": 31
   },
   {
     "days": [
@@ -1647,7 +1647,7 @@
         "contributionCount": 4
       }
     ],
-    "count": 31
+    "count": 69
   },
   {
     "days": [
@@ -1680,7 +1680,7 @@
         "contributionCount": 0
       }
     ],
-    "count": 49
+    "count": 69
   },
   {
     "days": [
@@ -1691,8 +1691,12 @@
       {
         "date": "2026-04-13",
         "contributionCount": 0
+      },
+      {
+        "date": "2026-04-14",
+        "contributionCount": 0
       }
     ],
-    "count": 2
+    "count": 8
   }
 ]
