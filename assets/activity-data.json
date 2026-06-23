@@ -1628,11 +1628,11 @@
       },
       {
         "date": "2026-06-09",
-        "contributionCount": 3
+        "contributionCount": 5
       },
       {
         "date": "2026-06-10",
-        "contributionCount": 6
+        "contributionCount": 9
       },
       {
         "date": "2026-06-11",
@@ -1644,10 +1644,10 @@
       },
       {
         "date": "2026-06-13",
-        "contributionCount": 22
+        "contributionCount": 31
       }
     ],
-    "count": 100
+    "count": 114
   },
   {
     "days": [
@@ -1690,9 +1690,13 @@
       },
       {
         "date": "2026-06-22",
+        "contributionCount": 3
+      },
+      {
+        "date": "2026-06-23",
         "contributionCount": 0
       }
     ],
-    "count": 7
+    "count": 15
   }
 ]
