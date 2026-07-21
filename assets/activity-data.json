@@ -1680,7 +1680,7 @@
         "contributionCount": 1
       }
     ],
-    "count": 37
+    "count": 36
   },
   {
     "days": [
@@ -1690,9 +1690,13 @@
       },
       {
         "date": "2026-07-20",
+        "contributionCount": 2
+      },
+      {
+        "date": "2026-07-21",
         "contributionCount": 0
       }
     ],
-    "count": 6
+    "count": 10
   }
 ]
