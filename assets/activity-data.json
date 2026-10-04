@@ -2,39 +2,6 @@
   {
     "days": [
       {
-        "date": "2025-10-05",
-        "contributionCount": 0
-      },
-      {
-        "date": "2025-10-06",
-        "contributionCount": 0
-      },
-      {
-        "date": "2025-10-07",
-        "contributionCount": 0
-      },
-      {
-        "date": "2025-10-08",
-        "contributionCount": 0
-      },
-      {
-        "date": "2025-10-09",
-        "contributionCount": 1
-      },
-      {
-        "date": "2025-10-10",
-        "contributionCount": 0
-      },
-      {
-        "date": "2025-10-11",
-        "contributionCount": 0
-      }
-    ],
-    "count": 8
-  },
-  {
-    "days": [
-      {
         "date": "2025-10-12",
         "contributionCount": 0
       },
@@ -1710,6 +1677,15 @@
       },
       {
         "date": "2026-10-03",
+        "contributionCount": 0
+      }
+    ],
+    "count": 0
+  },
+  {
+    "days": [
+      {
+        "date": "2026-10-04",
         "contributionCount": 0
       }
     ],
