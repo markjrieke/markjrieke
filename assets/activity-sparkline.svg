@@ -5,7 +5,7 @@
       <stop offset="1.96%" stop-color="#416440"/>
       <stop offset="3.92%" stop-color="#314f31"/>
       <stop offset="5.88%" stop-color="#2e4b2f"/>
-      <stop offset="7.84%" stop-color="#375737"/>
+      <stop offset="7.84%" stop-color="#375637"/>
       <stop offset="9.80%" stop-color="#304d30"/>
       <stop offset="11.76%" stop-color="#335233"/>
       <stop offset="13.73%" stop-color="#2d492e"/>
@@ -20,42 +20,42 @@
       <stop offset="31.37%" stop-color="#304e31"/>
       <stop offset="33.33%" stop-color="#314f32"/>
       <stop offset="35.29%" stop-color="#2e4b2f"/>
-      <stop offset="37.25%" stop-color="#496e47"/>
+      <stop offset="37.25%" stop-color="#486e46"/>
       <stop offset="39.22%" stop-color="#395938"/>
       <stop offset="41.18%" stop-color="#456943"/>
-      <stop offset="43.14%" stop-color="#466a44"/>
-      <stop offset="45.10%" stop-color="#4b7148"/>
-      <stop offset="47.06%" stop-color="#345234"/>
+      <stop offset="43.14%" stop-color="#456a44"/>
+      <stop offset="45.10%" stop-color="#4a7048"/>
+      <stop offset="47.06%" stop-color="#335234"/>
       <stop offset="49.02%" stop-color="#2c482d"/>
-      <stop offset="50.98%" stop-color="#375737"/>
+      <stop offset="50.98%" stop-color="#375637"/>
       <stop offset="52.94%" stop-color="#40633f"/>
-      <stop offset="54.90%" stop-color="#436641"/>
-      <stop offset="56.86%" stop-color="#4c7249"/>
-      <stop offset="58.82%" stop-color="#578154"/>
-      <stop offset="60.78%" stop-color="#557f52"/>
-      <stop offset="62.75%" stop-color="#669561"/>
-      <stop offset="64.71%" stop-color="#476c45"/>
+      <stop offset="54.90%" stop-color="#426641"/>
+      <stop offset="56.86%" stop-color="#4b7249"/>
+      <stop offset="58.82%" stop-color="#578153"/>
+      <stop offset="60.78%" stop-color="#557e52"/>
+      <stop offset="62.75%" stop-color="#659460"/>
+      <stop offset="64.71%" stop-color="#466b45"/>
       <stop offset="66.67%" stop-color="#3d5e3c"/>
-      <stop offset="68.63%" stop-color="#436641"/>
+      <stop offset="68.63%" stop-color="#426641"/>
       <stop offset="70.59%" stop-color="#3b5c3a"/>
-      <stop offset="72.55%" stop-color="#446842"/>
+      <stop offset="72.55%" stop-color="#436742"/>
       <stop offset="74.51%" stop-color="#395a39"/>
-      <stop offset="76.47%" stop-color="#40623f"/>
-      <stop offset="78.43%" stop-color="#3b5b3a"/>
+      <stop offset="76.47%" stop-color="#3f623e"/>
+      <stop offset="78.43%" stop-color="#3a5b3a"/>
       <stop offset="80.39%" stop-color="#3c5d3b"/>
-      <stop offset="82.35%" stop-color="#4b7149"/>
-      <stop offset="84.31%" stop-color="#486d46"/>
-      <stop offset="86.27%" stop-color="#4c7249"/>
+      <stop offset="82.35%" stop-color="#4b7148"/>
+      <stop offset="84.31%" stop-color="#476d46"/>
+      <stop offset="86.27%" stop-color="#4b7249"/>
       <stop offset="88.24%" stop-color="#2c482d"/>
       <stop offset="90.20%" stop-color="#2c482d"/>
       <stop offset="92.16%" stop-color="#2c482d"/>
-      <stop offset="94.12%" stop-color="#4a6f47"/>
-      <stop offset="96.08%" stop-color="#51794e"/>
-      <stop offset="98.04%" stop-color="#557e51"/>
-      <stop offset="100.00%" stop-color="#3f613e"/>
+      <stop offset="94.12%" stop-color="#537b50"/>
+      <stop offset="96.08%" stop-color="#567f52"/>
+      <stop offset="98.04%" stop-color="#669561"/>
+      <stop offset="100.00%" stop-color="#476c45"/>
     </linearGradient>
   </defs>
   <line x1="3" y1="30" x2="177" y2="30" stroke="#30363d" stroke-width="0.8"/>
-  <path d="M 3.00,30.00 L 3.00,29.81 L 6.41,18.80 L 9.82,27.15 L 13.24,28.67 L 16.65,24.11 L 20.06,27.72 L 23.47,26.01 L 26.88,29.24 L 30.29,29.81 L 33.71,28.10 L 37.12,27.34 L 40.53,29.24 L 43.94,29.05 L 47.35,26.77 L 50.76,27.53 L 54.18,26.58 L 57.59,27.53 L 61.00,26.96 L 64.41,28.48 L 67.82,15.00 L 71.24,23.16 L 74.65,16.90 L 78.06,16.52 L 81.47,13.86 L 84.88,25.82 L 88.29,29.62 L 91.71,24.11 L 95.12,19.18 L 98.53,18.04 L 101.94,13.29 L 105.35,7.41 L 108.76,8.35 L 112.18,0.00 L 115.59,15.95 L 119.00,21.08 L 122.41,18.04 L 125.82,22.03 L 129.24,17.47 L 132.65,22.78 L 136.06,19.56 L 139.47,22.22 L 142.88,21.46 L 146.29,13.67 L 149.71,15.38 L 153.12,13.29 L 156.53,30.00 L 159.94,29.81 L 163.35,30.00 L 166.76,14.43 L 170.18,10.82 L 173.59,8.73 L 177.00,19.94 L 177.00,30.00 Z" fill="#2ea043" fill-opacity="0.04"/>
-  <path d="M 3.00,29.81 L 6.41,18.80 L 9.82,27.15 L 13.24,28.67 L 16.65,24.11 L 20.06,27.72 L 23.47,26.01 L 26.88,29.24 L 30.29,29.81 L 33.71,28.10 L 37.12,27.34 L 40.53,29.24 L 43.94,29.05 L 47.35,26.77 L 50.76,27.53 L 54.18,26.58 L 57.59,27.53 L 61.00,26.96 L 64.41,28.48 L 67.82,15.00 L 71.24,23.16 L 74.65,16.90 L 78.06,16.52 L 81.47,13.86 L 84.88,25.82 L 88.29,29.62 L 91.71,24.11 L 95.12,19.18 L 98.53,18.04 L 101.94,13.29 L 105.35,7.41 L 108.76,8.35 L 112.18,0.00 L 115.59,15.95 L 119.00,21.08 L 122.41,18.04 L 125.82,22.03 L 129.24,17.47 L 132.65,22.78 L 136.06,19.56 L 139.47,22.22 L 142.88,21.46 L 146.29,13.67 L 149.71,15.38 L 153.12,13.29 L 156.53,30.00 L 159.94,29.81 L 163.35,30.00 L 166.76,14.43 L 170.18,10.82 L 173.59,8.73 L 177.00,19.94" stroke="url(#sparkGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 3.00,30.00 L 3.00,29.81 L 6.41,18.94 L 9.82,27.19 L 13.24,28.69 L 16.65,24.19 L 20.06,27.75 L 23.47,26.06 L 26.88,29.25 L 30.29,29.81 L 33.71,28.12 L 37.12,27.38 L 40.53,29.25 L 43.94,29.06 L 47.35,26.81 L 50.76,27.56 L 54.18,26.62 L 57.59,27.56 L 61.00,27.00 L 64.41,28.50 L 67.82,15.19 L 71.24,23.25 L 74.65,17.06 L 78.06,16.69 L 81.47,14.06 L 84.88,25.88 L 88.29,29.62 L 91.71,24.19 L 95.12,19.31 L 98.53,18.19 L 101.94,13.50 L 105.35,7.69 L 108.76,8.62 L 112.18,0.37 L 115.59,16.12 L 119.00,21.19 L 122.41,18.19 L 125.82,22.12 L 129.24,17.62 L 132.65,22.88 L 136.06,19.69 L 139.47,22.31 L 142.88,21.56 L 146.29,13.88 L 149.71,15.56 L 153.12,13.50 L 156.53,30.00 L 159.94,29.81 L 163.35,30.00 L 166.76,9.75 L 170.18,8.25 L 173.59,0.00 L 177.00,15.94 L 177.00,30.00 Z" fill="#2ea043" fill-opacity="0.04"/>
+  <path d="M 3.00,29.81 L 6.41,18.94 L 9.82,27.19 L 13.24,28.69 L 16.65,24.19 L 20.06,27.75 L 23.47,26.06 L 26.88,29.25 L 30.29,29.81 L 33.71,28.12 L 37.12,27.38 L 40.53,29.25 L 43.94,29.06 L 47.35,26.81 L 50.76,27.56 L 54.18,26.62 L 57.59,27.56 L 61.00,27.00 L 64.41,28.50 L 67.82,15.19 L 71.24,23.25 L 74.65,17.06 L 78.06,16.69 L 81.47,14.06 L 84.88,25.88 L 88.29,29.62 L 91.71,24.19 L 95.12,19.31 L 98.53,18.19 L 101.94,13.50 L 105.35,7.69 L 108.76,8.62 L 112.18,0.37 L 115.59,16.12 L 119.00,21.19 L 122.41,18.19 L 125.82,22.12 L 129.24,17.62 L 132.65,22.88 L 136.06,19.69 L 139.47,22.31 L 142.88,21.56 L 146.29,13.88 L 149.71,15.56 L 153.12,13.50 L 156.53,30.00 L 159.94,29.81 L 163.35,30.00 L 166.76,9.75 L 170.18,8.25 L 173.59,0.00 L 177.00,15.94" stroke="url(#sparkGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 </svg>
